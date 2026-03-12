@@ -19,7 +19,10 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: Implementation :: CPython",
 ]
-dependencies = []
+dependencies = ["pyyaml"]
+
+[project.scripts]
+sga-readiness = "sga_readiness.cli:cli"
 
 [project.urls]
 Documentation = "https://github.com/Mark Thomas/sga-readiness#readme"
