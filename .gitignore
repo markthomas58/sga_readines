@@ -1,1 +1,3 @@
 readiness.yaml
+__pycache__/
+dist/
