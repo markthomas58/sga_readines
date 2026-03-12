@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"$HOME/.local/bin:$PATH\" && hatch build 2>&1)",
+      "Bash(git push:*)",
+      "Bash(ssh-keyscan:*)",
+      "Bash(ssh:*)",
+      "Bash(ssh-add:*)",
+      "Bash(export PATH=\"$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH\" && which hatch && hatch --version 2>&1)",
+      "Bash(export PATH=\"$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH\" && hatch test 2>&1)",
+      "Bash(export PATH=\"$HOME/.local/bin:$PATH\" && gh pr merge 1 --merge 2>&1)",
+      "Bash(tail:*)"
+    ]
+  }
+}
