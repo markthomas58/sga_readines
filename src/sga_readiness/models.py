@@ -34,7 +34,7 @@ class ReadinessReport:
         warned = sum(1 for r in self.results if r.status == CheckStatus.WARN)
         skipped = sum(1 for r in self.results if r.status == CheckStatus.SKIP)
 
-        parts = [f"{total} checks:"]
+        parts = [f"{total} checks"]
         if passed:
             parts.append(f"{passed} passed")
         if failed:
