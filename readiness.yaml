@@ -1,0 +1,25 @@
+checks:
+  - name: "API health"
+    type: http
+    url: "http://localhost:8080/health"
+    expected_status: 200
+
+  - name: "Database reachable"
+    type: port
+    host: "localhost"
+    port: 5432
+    timeout: 5
+
+  - name: "Redis"
+    type: dependency
+    host: "localhost"
+    port: 6379
+    timeout: 3
+
+  - name: "API_KEY configured"
+    type: config
+    env_var: "API_KEY"
+
+  - name: "DATABASE_URL configured"
+    type: config
+    env_var: "DATABASE_URL"
