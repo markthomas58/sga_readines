@@ -1,19 +1,37 @@
 # sga_readiness
 
-[![PyPI - Version](https://img.shields.io/pypi/v/sga-readiness.svg)](https://pypi.org/project/sga-readiness)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sga-readiness.svg)](https://pypi.org/project/sga-readiness)
+SGA readiness assessment tool.
 
------
+## Requirements
 
-## Table of Contents
+- Python 3.12+
 
-- [Installation](#installation)
-- [License](#license)
+## Setup
 
-## Installation
+```bash
+pip install hatch
+```
 
-```console
-pip install sga-readiness
+## Development
+
+```bash
+# Start a shell in the Hatch environment
+hatch shell
+
+# Run tests
+hatch test
+
+# Build the package
+hatch build
+```
+
+## Project Structure
+
+```
+src/
+  sga_readiness/       # Main source code
+tests/                 # Test files
+pyproject.toml         # Project config & dependencies
 ```
 
 ## License
