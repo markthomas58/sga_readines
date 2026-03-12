@@ -47,6 +47,12 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Show detailed check output",
     )
+    check_parser.add_argument(
+        "--parallel",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Run checks in parallel (default: enabled)",
+    )
 
     args = parser.parse_args(argv)
 
@@ -55,7 +61,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     try:
-        report = run_checks(args.config)
+        report = run_checks(args.config, parallel=args.parallel)
     except (FileNotFoundError, ValueError) as e:
         print(f"{_RED}Error: {e}{_RESET}", file=sys.stderr)
         return 1
